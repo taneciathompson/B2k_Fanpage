@@ -8,7 +8,7 @@ let db, collection;
 const url = "mongodb+srv://mari27:code27@cluster0.3g7gm.mongodb.net/express?retryWrites=true&w=majority";
 const dbName = "express";
 
-app.listen(8080, () => {
+app.listen((process.env.PORT || 8080), () => {
     MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }, (error, client) => {
         if(error) {
             throw error;
